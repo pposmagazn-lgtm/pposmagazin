@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PPOSMAGAZIN</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: #000000;  /* Svart bakgrunn */
+      color: #e5e5e5;
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(0, 0, 0, 0.9);  /* Svart bakgrunn */
+      border-bottom: 1px solid rgba(255, 0, 0, 0.08);  /* Rød kant */
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #ff0000;  /* Rød logo */
+    }
+
+    .nav-links a {
+      margin-left: 18px;
+      font-size: 14px;
+      text-decoration: none;
+      color: #9ca3af;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 20px 60px;
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(240px, 1.4fr);
+      gap: 40px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #ff0000;  /* Rød farge for eyebrow */
+      opacity: 0.9;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
+      font-size: clamp(30px, 4vw, 40px);
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 span {
+      color: #ff0000;  /* Rød farge på "fashion" i hero */
+    }
+
+    .hero p {
+      font-size: 15px;
+      color: #9ca3af;
+      margin-bottom: 22px;
+      max-width: 460px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(to right, #ff0000, #ff4d4d);  /* Rød gradient */
+      color: #f9fafb;
+      box-shadow: 0 10px 25px rgba(255, 0, 0, 0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(255, 0, 0, 0.45);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border-color: rgba(156, 163, 175, 0.4);
+      color: #9ca3af;
+    }
+
+    .btn-ghost:hover {
+      border-color: #ff0000;  /* Rød farge på knapper */
+      color: #e5e7eb;
+      transform: translateY(-1px);
+    }
+
+    footer {
+      border-top: 1px solid rgba(31, 41, 55, 0.9);
+      padding: 16px 20px 26px;
+      font-size: 10px;
+      color: #6b7280;
+      text-align: center;
+      background: #020817;
+      margin-top: 16px;
+    }
+
+    footer a {
+      color: #ff0000;  /* Rød lenke */
+      text-decoration: none;
+      margin-left: 4px;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <div class="logo">PPOSMAGAZIN</div>
+    <div class="nav-links">
+      <a href="#om">Om</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Velkommen til PPOSMAGAZIN</div>
+      <h1>Din kilde til <span>fashion</span>, kultur, musikk og trender!</h1>
+      <p>PPOSMAGAZIN er bloggen der du finner de nyeste postene om alt som er innenfor fashion, kultur, musikk og trender. Vi deler de hotteste nyhetene, de beste tipsene og mye mer.</p>
+      <div class="buttons">
+        <a href="#kontakt" class="btn-primary">Ta kontakt</a>
+        <a href="#om" class="btn-ghost">Les mer om oss</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <h2>Følg med på de nyeste trendene</h2>
+      <div class="feature-list">
+        <span>Oppdag mote, musikk og kultur på ett sted</span>
+        <span>Få tips og inspirasjon fra eksperter og influensere</span>
+        <span>Alltid oppdatert med de hotteste trendene</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="om">
+    <h2>Om PPOSMAGAZIN</h2>
+    <p>
+      PPOSMAGAZIN er din go-to blogg for alt som handler om fashion, kultur, musikk og trender. Vi bringer deg de nyeste artiklene, bilder og nyheter for å holde deg oppdatert på hva som skjer i verden av stil og kunst. 
+    </p>
+  </section>
+
+  <section id="kontakt">
+    <h2>Kontakt oss</h2>
+    <p>Har du spørsmål eller ønsker å komme i kontakt med oss? Send oss en e-post på <a href="mailto:pposmagazn@gmail.com">pposmagazn@gmail.com</a>.</p>
+  </section>
+</main>
+
+<footer>
+  © <span id="year"></span> PPOSMAGAZIN. Alle rettigheter reservert.
+  <a href="#hero">Til toppen ↑</a>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
